@@ -1,21 +1,45 @@
 body {
     margin: 0;
     padding: 0;
-    background: url('bg.webp') no-repeat center center fixed;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    overflow: hidden; /* Prevents scrolling */
+}
+
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
 }
 
 .gif-container {
     position: absolute;
     display: flex;
     gap: 20px;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    justify-content: center;
+    align-items: center;
 }
 
 .gif {
-    width: 150px; /* Adjust size as needed */
+    width: 150px;
     height: auto;
+}
+
+/* Responsive Styles for Phones (Portrait Mode) */
+@media (max-width: 768px) {
+    .gif-container {
+        flex-direction: column; /* Stack GIFs vertically */
+        gap: 10px;
+    }
+
+    .gif {
+        width: 100px; /* Reduce GIF size for smaller screens */
+    }
 }
