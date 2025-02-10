@@ -21,14 +21,14 @@ body {
 .gif-container {
     position: absolute;
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+    gap: 30px;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap; /* Allows GIFs to wrap on smaller screens */
 }
 
 .gif {
-    width: 150px;
+    width: 200px; /* Increased size */
     height: auto;
 }
 
@@ -36,10 +36,10 @@ body {
 @media (max-width: 768px) {
     .gif-container {
         flex-direction: column; /* Stack GIFs vertically */
-        gap: 10px;
+        gap: 15px;
     }
 
     .gif {
-        width: 100px; /* Reduce GIF size for smaller screens */
+        width: 150px; /* Larger GIFs for mobile */
     }
 }
