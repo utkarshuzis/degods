@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url('bg.webp') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.gif-container {
+    position: absolute;
+    display: flex;
+    gap: 20px;
+}
+
+.gif {
+    width: 150px; /* Adjust size as needed */
+    height: auto;
+}
